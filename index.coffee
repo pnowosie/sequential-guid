@@ -26,7 +26,7 @@ class SeqUuid
     @seed = @seed[0...24] + lastpart
     
   generate: ->
-    uuid[@guid_ver]()
+    uuid[@guid_ver]().toLowerCase()
   
   deferInit: false
     
