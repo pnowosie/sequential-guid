@@ -1,3 +1,8 @@
+# [WARN] !This code does not work properly for all test cases! 
+# [TODO] Add header
+# [TODO] Sample usage info, how to obtain js version
+# [TODO] Generated guid may be invalid as RFC4122 UUID, make generation alg doesn't break version.4 guids
+
 uuid = require 'node-uuid'
 
 class SeqUuid
@@ -6,6 +11,9 @@ class SeqUuid
     @seed = undefined
     @seed = @generate() unless @deferInit
   
+  # [WARN] Broken, will be changed soon
+  # V1: Simpler. more robust incrementation that works
+  # V2: Incrementation that won't break version.4 guids  
   next: ->
     _increaseHex = (hex) ->
       startlen = hex.length
@@ -29,5 +37,9 @@ class SeqUuid
     uuid[@guid_ver]().toLowerCase()
   
   deferInit: false
-    
+  
+
+if require.main == module
+  throw new Error "This module is not intended to be run as standalone application."
+
 module.exports = SeqUuid
