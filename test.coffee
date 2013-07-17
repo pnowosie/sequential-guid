@@ -23,7 +23,9 @@ assert = (expected, value, desc) ->
     console.error " [2]:\t#{value}"
   else
     console.log (desc or ' -') + ' ................ [' + color.green + 'OK' +color.reset + ']'
-  
+
+# [TODO] Make sure all above are valid RFC4122 version 4 UUIDs
+
 assert '00000000-0000-4000-a000-000000000001', run '00000000-0000-4000-a000-000000000000' 
 assert '00000000-0000-4000-a000-000000000002', run '00000000-0000-4000-a000-000000000001' 
 assert '00000000-0000-4000-a000-00000000000a', run '00000000-0000-4000-a000-000000000009' 
