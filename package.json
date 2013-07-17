@@ -1,0 +1,14 @@
+{
+  "name"          : "sequencial-guid",
+  "description"   : "Sequencial unique identifiers generator",
+  "url"           : "https://github.com/pnowosie/sequencial-guid",
+  "keywords"      : ["uuid", "guid", "sequencial uuid"],
+  "author"        : "Pawel Nowosielski <nowosielski@gmail.com>",
+  "contributors"  : [ ],
+  "dependencies"  : {
+        "node-uuid" : ">= 1.4.0"
+  },
+  "repository"    : { "type" : "git", "url" : "https://github.com/pnowosie/sequencial-guid.git" },
+  "engine"        : "0.10.4",
+  "version"       : "0.0.1"
+}
