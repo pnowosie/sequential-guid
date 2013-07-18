@@ -11,27 +11,30 @@ class SeqUuid
     @seed = undefined
     @seed = @generate() unless @deferInit
   
-  # [WARN] Broken, will be changed soon
-  # V1: Simpler. more robust incrementation that works
   # V2: Incrementation that won't break version.4 guids  
   next: ->
-    _increaseHex = (hex) ->
-      startlen = hex.length
-      counter = parseInt '0x' + hex
-      hex = ''
-      if Math.pow(16, startlen) - 1 > counter then hex = (++counter).toString 16
-      hex = '0' + hex while hex.length < startlen
-      hex
+    carry = true
+    _increaseDigit = (digit) ->
+      if digit == 'f' 
+        carry = true
+        return '0'
+      carry = false
+      if digit == '9' then return 'a'
+      String.fromCharCode digit.charCodeAt() + 1
+    
+    _increase = (digit) -> 
+      return digit if digit == '-'
+      if carry then _increaseDigit digit else digit
     
     @seed = @generate() unless @seed?
     throw new Error "Seed has invalid format" if @seed.length != 36
+    @seed = @seed.toLowerCase()
     
-    lastpart = @seed[36-12..]
-    lastpart = _increaseHex lastpart
-    if (parseInt '0x' + lastpart) == 0
-      @seed = @seed[0..18] + (_increaseHex @seed[18+1...24-1]) + '-'
-    
-    @seed = @seed[0...24] + lastpart
+    ((@seed.split '')
+           .reverse()
+           .map _increase)
+           .reverse()
+           .join ''
     
   generate: ->
     uuid[@guid_ver]().toLowerCase()

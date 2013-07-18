@@ -40,4 +40,5 @@ assert '00000000-0000-5000-0000-000000000000', run '00000000-0000-4fff-ffff-ffff
 assert '00000000-0001-0000-0000-000000000000', run '00000000-0000-ffff-ffff-ffffffffffff'
 assert '00000001-0000-0000-0000-000000000000', run '00000000-ffff-ffff-ffff-ffffffffffff'
 assert 'f0000000-0000-0000-0000-000000000000', run 'efffffff-ffff-ffff-ffff-ffffffffffff'
+assert 'ff000000-0000-0000-0000-000000000000', run 'feffffff-ffff-ffff-ffff-ffffffffffff'
 assert '00000000-0000-0000-0000-000000000000', run 'ffffffff-ffff-ffff-ffff-ffffffffffff'
