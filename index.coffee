@@ -1,4 +1,4 @@
-# [WARN] !This code does not work properly for all test cases! 
+# [WARN] !Current implementation can generate string that is not valid RFC4122 UID! 
 # [TODO] Add header
 # [TODO] Sample usage info, how to obtain js version
 # [TODO] Generated guid may be invalid as RFC4122 UUID, make generation alg doesn't break version.4 guids
