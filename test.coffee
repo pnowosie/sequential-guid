@@ -42,3 +42,12 @@ assert '00000001-0000-0000-0000-000000000000', run '00000000-ffff-ffff-ffff-ffff
 assert 'f0000000-0000-0000-0000-000000000000', run 'efffffff-ffff-ffff-ffff-ffffffffffff'
 assert 'ff000000-0000-0000-0000-000000000000', run 'feffffff-ffff-ffff-ffff-ffffffffffff'
 assert '00000000-0000-0000-0000-000000000000', run 'ffffffff-ffff-ffff-ffff-ffffffffffff'
+
+# Test defered initialization
+Sid::deferInit = true
+assert undefined, (new Sid).seed, 'Defered initialization'
+
+Sid::deferInit = false
+guid = (new Sid).seed	# without calling next()
+assert 'string', typeof guid, 'Type of initialized guid should be string'
+assert 36, guid.length, 'Initialized guid should have correct length' 
