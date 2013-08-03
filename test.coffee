@@ -51,3 +51,11 @@ Sid::deferInit = false
 guid = (new Sid).seed	# without calling next()
 assert 'string', typeof guid, 'Type of initialized guid should be string'
 assert 36, guid.length, 'Initialized guid should have correct length' 
+
+# Test sequence of invocation
+sid = new Sid
+sid.seed = '00000000-0000-4000-a000-000000000000'
+sid.next() for i in [1..5]
+assert '00000000-0000-4000-a000-000000000005', sid.seed, '1st 5 batch generation'
+sid.next() for i in [1..5]
+assert '00000000-0000-4000-a000-00000000000a', sid.seed, '2nd 5 batch generation'

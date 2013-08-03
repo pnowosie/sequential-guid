@@ -30,11 +30,13 @@ class SeqUuid
     throw new Error "Seed has invalid format" if @seed.length != 36
     @seed = @seed.toLowerCase()
     
-    ((@seed.split '')
+    @seed = ((@seed.split '')
            .reverse()
            .map _increase)
            .reverse()
            .join ''
+    
+    @seed
     
   generate: ->
     uuid[@guid_ver]().toLowerCase()
