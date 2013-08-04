@@ -7,7 +7,7 @@ How-to
 ======
 
 Start with install a package 
-```javascript
+```
   npm install https://github.com/pnowosie/sequencial-guid/raw/master/bin/sequencial-guid-0.1.0.tgz
 ```
 
@@ -19,11 +19,11 @@ In your code require library code and create object
 
 Creating new instance of guid class cause generation of the seed 
 ```javascript
-  console.log( uid.seed )   // output unique identifier like this: 6e44dc51-804d-47ab-a933-f94641cf86cf
+  console.log( uid.seed )   // output guid like this: 6e44dc51-804d-47ab-a933-f94641cf86cf
 ```
 
 You can deffer generating seed value by seting *deferInit* property. Now new object has undefined seed until you call *next()* method on it, 
-we can specify value for seed
+we can also specify value for seed
 ```javascript
   Uid.prototype.deferInit = true
   var iid = new Uid
