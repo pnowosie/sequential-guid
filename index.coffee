@@ -35,9 +35,7 @@ class SeqUuid
            .map _increase)
            .reverse()
            .join ''
-    
-    @seed
-    
+  
   generate: ->
     uuid[@guid_ver]().toLowerCase()
   

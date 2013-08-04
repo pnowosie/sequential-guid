@@ -45,8 +45,7 @@
         throw new Error("Seed has invalid format");
       }
       this.seed = this.seed.toLowerCase();
-      this.seed = ((this.seed.split('')).reverse().map(_increase)).reverse().join('');
-      return this.seed;
+      return this.seed = ((this.seed.split('')).reverse().map(_increase)).reverse().join('');
     };
 
     SeqUuid.prototype.generate = function() {
