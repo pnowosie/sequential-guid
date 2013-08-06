@@ -1,7 +1,7 @@
 sequencial-guid
 ===============
 
-Node package for generating sequencial unique identifiers based on node-uuid.
+Node package for generating sequencial unique identifiers based on unique guid seed. Generation guids version 1 and 4 cannot be done without node-uuid library, [thank you Broofa](https://github.com/broofa/node-uuid).
 
 How-to
 ======

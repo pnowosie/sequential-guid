@@ -1,6 +1,12 @@
+##     sequencial-guid
+##
+##     Copyright (c) 2013 Pawel Nowosielski
+##     MIT License - http://opensource.org/licenses/mit-license.php
+##
+##     More info and usage, please refer to README.md file
+##     Generation guids version 1 and 4 cannot be done without node-uuid library, [thank you Broofa](https://github.com/broofa/node-uuid).
+
 # [WARN] !Current implementation can generate string that is not valid RFC4122 UID! 
-# [TODO] Add header
-# [TODO] Sample usage info, how to obtain js version
 # [TODO] Generated guid may be invalid as RFC4122 UUID, make generation alg doesn't break version.4 guids
 
 uuid = require 'node-uuid'
