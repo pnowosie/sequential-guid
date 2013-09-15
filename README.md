@@ -1,19 +1,19 @@
-sequencial-guid
+sequential-guid
 ===============
 
-Node package for generating sequencial unique identifiers based on unique guid seed. Generation guids version 1 and 4 cannot be done without node-uuid library, [thank you Broofa](https://github.com/broofa/node-uuid).
+Node package for generating sequential unique identifiers based on unique guid seed. Generation guids version 1 and 4 cannot be done without node-uuid library, [thank you Broofa](https://github.com/broofa/node-uuid).
 
 How-to
 ======
 
 Start with install a package 
 ```
-  npm install https://github.com/pnowosie/sequencial-guid/raw/master/bin/sequencial-guid.tgz
+  npm install https://github.com/pnowosie/sequential-guid/raw/master/bin/sequencial-guid.tgz
 ```
 
 In your code require library code and create object
 ```javascript
-  var Uid = require('sequencial-guid')
+  var Uid = require('sequential-guid')
   var uid = new Uid
 ```
 

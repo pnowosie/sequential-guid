@@ -1,8 +1,8 @@
 {
-  "name"          : "sequencial-guid",
-  "description"   : "Sequencial unique identifiers generator",
-  "url"           : "https://github.com/pnowosie/sequencial-guid",
-  "keywords"      : ["uuid", "guid", "sequencial uuid"],
+  "name"          : "sequential-guid",
+  "description"   : "Sequential unique identifiers generator",
+  "url"           : "https://github.com/pnowosie/sequential-guid",
+  "keywords"      : ["uuid", "guid", "sequence identifier"],
   "author"        : "Pawel Nowosielski <nowosielski@gmail.com>",
   "contributors"  : [ ],
   "dependencies"  : {
@@ -11,7 +11,7 @@
   "scripts": { 
         "test" : "coffee ./test.coffee"
   },
-  "repository"    : { "type" : "git", "url" : "https://github.com/pnowosie/sequencial-guid.git" },
+  "repository"    : { "type" : "git", "url" : "https://github.com/pnowosie/sequential-guid.git" },
   "engine"        : "0.10.4",
   "version"       : "1.0.0"
 }

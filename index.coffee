@@ -1,5 +1,5 @@
 ###
-*    sequencial-guid
+*    sequential-guid
 *
 *    Copyright (c) 2013 Pawel Nowosielski
 *    MIT License - http://opensource.org/licenses/mit-license.php
