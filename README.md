@@ -8,7 +8,7 @@ How-to
 
 Start with install a package 
 ```
-  npm install https://github.com/pnowosie/sequential-guid/raw/master/bin/sequential-guid.tgz
+  npm install sequential-guid
 ```
 
 In your code require library code and create object
