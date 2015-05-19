@@ -6,7 +6,9 @@ Node package for generating sequential unique identifiers based on unique guid s
 ## Getting Started
 
 Install it in your browser:
-
+```
+bower install sequential-guid
+```
 ```html
 <!-- Don't forget to include 'node-uuid' dependency (https://github.com/broofa/node-uuid) -->
 <script src="sequid.js"></script>
