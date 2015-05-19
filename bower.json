@@ -1,17 +1,15 @@
 {
-  "name": "sequid",
+  "name": "sequential-guid",
   "version": "1.1.0",
   "homepage": "https://github.com/pnowosie/sequential-guid",
   "description": "Sequential unique identifiers generator",
   "main": "sequid.js",
-  "moduleType": [
-    "amd",
-    "node"
-  ],
+  "moduleType": ["amd", "node"],
   "keywords": ["uuid", "guid", "sequid", "sequence identifier"],
-  "authors": [
-    "Pawel Nowosielski <nowosielski@gmail.com>"
-  ],
+  "authors": ["Pawel Nowosielski <nowosielski@gmail.com>"],
+  "dependencies": {
+    "node-uuid": "1.4.2"
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
