@@ -15,5 +15,5 @@
   "main"          : "./sequid.js",
   "repository"    : { "type" : "git", "url" : "https://github.com/pnowosie/sequential-guid.git" },
   "engine"        : "0.10.4",
-  "version"       : "1.0.0"
+  "version"       : "1.1.0"
 }
