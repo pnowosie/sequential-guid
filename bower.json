@@ -1,0 +1,23 @@
+{
+  "name": "sequid",
+  "version": "1.1.0",
+  "homepage": "https://github.com/pnowosie/sequential-guid",
+  "description": "Sequential unique identifiers generator",
+  "main": "sequid.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": ["uuid", "guid", "sequid", "sequence identifier"],
+  "authors": [
+    "Pawel Nowosielski <nowosielski@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

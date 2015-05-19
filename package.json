@@ -2,7 +2,7 @@
   "name"          : "sequential-guid",
   "description"   : "Sequential unique identifiers generator",
   "url"           : "https://github.com/pnowosie/sequential-guid",
-  "keywords"      : ["uuid", "guid", "sequence identifier"],
+  "keywords"      : ["uuid", "guid", "sequid", "sequence identifier"],
   "author"        : "Pawel Nowosielski <nowosielski@gmail.com>",
   "contributors"  : [ ],
   "dependencies"  : {
@@ -12,6 +12,7 @@
         "test"  : "coffee ./test.coffee",
 		"start" : "coffee -c ./sequid.coffee"
   },
+  "main"          : "./sequid.js",
   "repository"    : { "type" : "git", "url" : "https://github.com/pnowosie/sequential-guid.git" },
   "engine"        : "0.10.4",
   "version"       : "1.0.0"
