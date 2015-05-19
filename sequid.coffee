@@ -11,7 +11,8 @@
 # [WARN] !Current implementation can generate string that is not valid RFC4122 UID! 
 # [TODO] Generated guid may be invalid as RFC4122 UUID, make generation alg doesn't break version.4 guids
 
-uuid = require 'node-uuid'
+uuid = if typeof(require) is 'function' then require 'node-uuid' else this.uuid
+
 
 class SeqUuid
   constructor: ->
@@ -50,7 +51,12 @@ class SeqUuid
   deferInit: false
   
 
-if require.main == module
+if typeof(require) isnt 'undefined' and require.main == module
   throw new Error "This module is not intended to be run as standalone application."
 
-module.exports = SeqUuid
+if typeof(exports) is 'object'
+  module.exports = SeqUuid
+else if typeof(define) is 'function' and define.amd
+  define (-> SeqUuid)
+else
+  this.SeqUuid = SeqUuid

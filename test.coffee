@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 # Simplest test framework that actualy works (at least in this case)
 
-Sid = require './index'
+Sid = require './sequid'
 
 color =
   red   : '\u001b[31m'
